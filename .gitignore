@@ -1,0 +1,8 @@
+# 備份檔：自己留著就好，不進版控
+*.backup-*
+*.bak
+
+# 系統雜檔
+.DS_Store
+Thumbs.db
+desktop.ini
