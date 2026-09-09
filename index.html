@@ -134,15 +134,18 @@
   }
   /* 天秤線稿：hero 右側背景。.hero-grid 有 z-index:1，文字永遠壓在它上面 */
   .hero-deco{
-    position:absolute;right:3%;top:50%;transform:translateY(-50%);
-    width:min(440px,40vw);height:auto;
-    z-index:0;pointer-events:none;opacity:.17;
+    position:absolute;right:2%;top:50%;
+    transform:translateY(-50%) rotate(-6deg);
+    width:min(480px,42vw);height:auto;
+    z-index:0;pointer-events:none;opacity:.2;
   }
-  .hero-deco path,.hero-deco circle{
-    fill:none;stroke:var(--tussock);stroke-width:1.6;
+  .hero-deco path,.hero-deco circle,.hero-deco rect,.hero-deco ellipse{
+    fill:none;stroke:var(--tussock);stroke-width:1.5;
     stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;
   }
-  @media (max-width:760px){.hero-deco{width:66vw;right:-10vw;opacity:.11;}}
+  @media (max-width:760px){
+    .hero-deco{width:74vw;right:-12vw;opacity:.12;transform:translateY(-50%) rotate(-5deg);}
+  }
   .portrait-frame{
     position:relative;z-index:1;aspect-ratio:3/4;overflow:hidden;background:var(--sisal-light);
     box-shadow:0 24px 50px -26px rgba(51,34,42,0.5);
@@ -352,21 +355,38 @@
 <main id="top">
   <section class="hero">
     <!-- 背景裝飾：天秤線稿，位於 hero 右側底層，文字與照片皆疊在其上 -->
-    <svg class="hero-deco" viewBox="0 0 200 216" aria-hidden="true" focusable="false">
-      <circle cx="100" cy="22" r="5.5"/>
-      <path d="M100 27.5V186"/>
-      <path d="M28 52H172"/>
-      <circle cx="28" cy="52" r="2.6"/>
-      <circle cx="172" cy="52" r="2.6"/>
-      <path d="M28 55V96M28 55L6 96M28 55L50 96"/>
-      <path d="M2 96H54"/>
-      <path d="M2 96Q28 122 54 96"/>
-      <path d="M172 55V96M172 55L150 96M172 55L194 96"/>
-      <path d="M146 96H198"/>
-      <path d="M146 96Q172 122 198 96"/>
-      <path d="M74 186Q100 193 126 186"/>
-      <path d="M74 186L64 201M126 186L136 201"/>
-      <path d="M62 201H138"/>
+    <svg class="hero-deco" viewBox="0 0 300 240" aria-hidden="true" focusable="false">
+      <!-- 法律書堆（左下，略歪，不完全水平） -->
+      <g transform="rotate(-3 78 180)">
+        <rect x="26" y="188" width="104" height="17" rx="2"/>
+        <rect x="30" y="171" width="98" height="17" rx="2"/>
+        <rect x="34" y="154" width="92" height="17" rx="2"/>
+        <path d="M32 193.5h92M36 176.5h86M40 159.5h80"/>
+      </g>
+      <!-- 天秤 -->
+      <circle cx="170" cy="28" r="5"/>
+      <path d="M170 33v163"/>
+      <path d="M108 60h124"/>
+      <circle cx="108" cy="60" r="2.5"/>
+      <circle cx="232" cy="60" r="2.5"/>
+      <path d="M108 63v37M108 63L88 100M108 63l20 37"/>
+      <path d="M84 100h48"/>
+      <path d="M84 100q24 24 48 0"/>
+      <path d="M232 63v37M232 63l-20 37M232 63l20 37"/>
+      <path d="M208 100h48"/>
+      <path d="M208 100q24 24 48 0"/>
+      <path d="M150 196q20 6 40 0"/>
+      <path d="M150 196l-10 16M190 196l10 16"/>
+      <path d="M138 212h64"/>
+      <!-- 法槌與音板（右下，槌身斜放） -->
+      <ellipse cx="240" cy="212" rx="36" ry="7"/>
+      <path d="M204 212v7a36 7 0 0 0 72 0v-7"/>
+      <g transform="translate(236 188) rotate(-30)">
+        <rect x="-26" y="-13" width="52" height="26" rx="4"/>
+        <path d="M-13 -13v26M13 -13v26"/>
+        <path d="M26 0h32"/>
+        <circle cx="62" cy="0" r="3.5"/>
+      </g>
     </svg>
     <div class="wrap hero-grid">
       <div class="portrait-col">
