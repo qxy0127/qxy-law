@@ -30,6 +30,62 @@
   "sameAs": ["https://line.me/ti/p/~qxy0127"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "第一次諮詢要收費嗎？費用怎麼計算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "依個案收費，委任後可折抵。實際金額視案件類型與複雜程度而定，聯繫時會先向你說明，確認後再安排諮詢。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "諮詢要準備什麼資料？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "帶齊與案件有關的書面資料：法院或地檢署文書、契約、存證信函、對話紀錄、匯款或收據憑證。另外請先想清楚你希望達成什麼結果。資料不齊也可以先談。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我還沒決定要不要提告，可以先諮詢嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，而且建議先談。很多案件最合適的處理方式並不是提告。先評估證據強弱、可能的結果、要付出的成本與時間，再決定走不走訴訟，本來就是諮詢的目的之一。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "服務哪些地區？外縣市的案件可以嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "全臺受理。主事務所位於桃園市桃園區，外縣市案件可安排電話或視訊諮詢；開庭則依案件管轄法院前往。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我傳訊息之後，多久會收到回覆？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般於 24 小時內回覆，假日順延。若案件有急迫的回應期限，請在訊息中直接註明，會優先處理。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "委任之後，案件是由誰處理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "由邱馨儀律師本人承辦。從諮詢、擬狀到出庭皆親自處理，不轉交、不假手他人，確保案件策略前後一致。"
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root{
     --sisal:#E4DDD5;
@@ -335,6 +391,105 @@
     html{scroll-behavior:auto;}
     .btn:hover{transform:none;}
   }
+
+  /* ───────── 情境分流（START HERE） ───────── */
+  .section-situations{background:var(--white);border-top:1px solid var(--sisal);border-bottom:1px solid var(--sisal);}
+  .lead-head{text-align:center;max-width:620px;margin:0 auto 46px;}
+  .eyebrow-line{
+    display:inline-block;font-family:var(--latin);font-style:italic;font-size:1rem;
+    letter-spacing:.22em;color:var(--tussock-deep);margin-bottom:8px;
+  }
+  .lead-head h2{font-size:clamp(1.7rem,2.9vw,2.3rem);color:var(--ink);margin-bottom:12px;}
+  .lead-head p{margin:0;color:var(--ink-soft);font-size:1.02rem;}
+  .situations{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media (max-width:760px){.situations{grid-template-columns:1fr;gap:20px;}}
+  .situation{
+    border:1px solid var(--sisal);background:var(--paper);padding:30px 28px;
+    display:flex;flex-direction:column;position:relative;transition:border-color .2s,transform .2s;
+  }
+  .situation:hover{border-color:var(--tussock);transform:translateY(-2px);}
+  .situation::before{content:"";position:absolute;top:-1px;left:-1px;width:calc(100% + 2px);height:3px;background:var(--tussock);}
+  .situation:nth-child(2)::before{background:var(--pharlap);}
+  .situation:nth-child(3)::before{background:var(--eggplant);}
+  .situation:nth-child(4)::before{background:var(--tussock-deep);}
+  .situation h3{font-size:1.22rem;color:var(--ink);margin-bottom:12px;line-height:1.6;}
+  .situation p{font-size:.98rem;color:var(--ink-soft);margin:0 0 18px;line-height:1.9;flex:1;}
+  .situation .go{
+    font-family:var(--kai);font-size:1rem;color:var(--eggplant);letter-spacing:.06em;
+    border-bottom:1px solid var(--tussock);align-self:flex-start;padding-bottom:2px;
+  }
+  .situation .go:hover{color:var(--tussock-deep);}
+
+  /* ───────── 可展開清單（知識庫 / 常見問題共用） ───────── */
+  .disclosure{border-top:1px solid var(--sisal);}
+  .disclosure details{border-bottom:1px solid var(--sisal);}
+  .disclosure summary{
+    list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;
+    font-family:var(--kai);font-size:1.16rem;color:var(--ink);letter-spacing:.04em;line-height:1.7;
+  }
+  .disclosure summary::-webkit-details-marker{display:none;}
+  .disclosure summary::after{
+    content:"";position:absolute;right:8px;top:50%;width:11px;height:11px;
+    border-right:1.5px solid var(--tussock);border-bottom:1.5px solid var(--tussock);
+    transform:translateY(-70%) rotate(45deg);transition:transform .2s;
+  }
+  .disclosure details[open] summary::after{transform:translateY(-30%) rotate(-135deg);}
+  .disclosure summary:hover{color:var(--eggplant);}
+  .disclosure .answer{padding:0 0 26px;color:var(--ink-soft);font-size:1rem;line-height:2;}
+  .disclosure .answer p{margin:0 0 12px;}
+  .disclosure .answer p:last-child{margin-bottom:0;}
+  .disclosure .answer ul{margin:0 0 12px;padding-left:22px;}
+  .disclosure .answer li{margin-bottom:8px;}
+  .disclosure .answer .takeaway{
+    margin-top:14px;padding:14px 18px;background:var(--pharlap-veil);
+    border-left:3px solid var(--eggplant);color:var(--eggplant-deep);font-size:.97rem;
+  }
+  .kb-tag{
+    display:inline-block;font-family:var(--latin);font-style:italic;font-size:.92rem;
+    letter-spacing:.08em;color:var(--tussock-deep);margin-right:10px;
+  }
+  .section-note{
+    margin-top:26px;font-size:.9rem;color:var(--ink-soft);line-height:1.85;
+    padding:16px 20px;background:var(--sisal-light);border-left:3px solid var(--sisal-deep);
+  }
+
+  /* ───────── 諮詢表單 ───────── */
+  .intake{background:var(--white);border:1px solid var(--sisal);padding:34px 32px;margin-top:30px;}
+  @media (max-width:640px){.intake{padding:26px 22px;}}
+  .intake h3{font-size:1.3rem;color:var(--ink);margin-bottom:8px;}
+  .intake .intake-lead{color:var(--ink-soft);font-size:.98rem;margin:0 0 26px;line-height:1.9;}
+  .field{margin-bottom:20px;}
+  .field label{
+    display:block;font-family:var(--kai);font-size:1.02rem;color:var(--ink);
+    letter-spacing:.05em;margin-bottom:8px;
+  }
+  .field .hint{font-family:var(--body);font-size:.88rem;color:var(--ink-soft);letter-spacing:0;}
+  .field input[type=text],.field input[type=tel],.field textarea{
+    width:100%;font-family:var(--body);font-size:1rem;color:var(--ink);
+    background:var(--paper);border:1px solid var(--sisal-deep);padding:12px 14px;
+    line-height:1.8;transition:border-color .2s;
+  }
+  .field textarea{min-height:120px;resize:vertical;}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--tussock);}
+  .chips-pick{display:flex;flex-wrap:wrap;gap:10px;}
+  .chips-pick label{
+    font-family:var(--body);font-size:.97rem;letter-spacing:.02em;margin:0;
+    border:1px solid var(--sisal-deep);padding:9px 18px;cursor:pointer;
+    color:var(--ink-soft);background:var(--paper);transition:all .18s;
+  }
+  .chips-pick input{position:absolute;opacity:0;width:0;height:0;}
+  .chips-pick input:checked + span{color:var(--white);}
+  .chips-pick label:has(input:checked){background:var(--eggplant);border-color:var(--eggplant);color:var(--white);}
+  .chips-pick label:focus-within{border-color:var(--tussock);}
+  .intake-submit{
+    width:100%;justify-content:center;border:none;font-size:1.08rem;margin-top:6px;
+  }
+  .intake-preview{
+    margin:16px 0 0;padding:16px 18px;background:var(--sisal-light);
+    border:1px dashed var(--sisal-deep);font-family:var(--body);font-size:.95rem;
+    color:var(--ink);line-height:1.9;white-space:pre-wrap;word-break:break-word;
+  }
+  .intake-note{margin:14px 0 0;font-size:.88rem;color:var(--ink-soft);line-height:1.8;}
 </style>
 
 <header class="topbar">
@@ -343,9 +498,11 @@
       <small>QIU XIN YI LAW FIRM</small>
     </a>
     <nav class="navlinks">
+      <a href="#situations">我的狀況</a>
       <a href="#about">學經歷</a>
       <a href="#practice">專業領域</a>
-      <a href="#belief">服務理念</a>
+      <a href="#knowledge">法律知識</a>
+      <a href="#faq">常見問題</a>
       <a href="#book">預約諮詢</a>
     </nav>
     <a class="nav-cta" href="#book">預約諮詢</a>
@@ -416,6 +573,38 @@
           <div><strong>民事‧家事‧刑事</strong>承辦案件類型</div>
           <div><strong>全臺受理</strong>服務範圍</div>
           <div><strong>桃園市桃園區</strong>主事務所</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="situations" class="section-situations">
+    <div class="wrap">
+      <div class="lead-head">
+        <span class="eyebrow-line">START HERE</span>
+        <h2>你現在的狀況是？</h2>
+        <p>不同處境，第一步不一樣。先找到最接近你的那一格，再決定要不要談。</p>
+      </div>
+      <div class="situations">
+        <div class="situation">
+          <h3>我收到法院或地檢署的文書</h3>
+          <p>傳票、起訴書、支付命令、存證信函——這類文書多半訂有回應期限，錯過就等於放棄答辯的機會。先確認文書的種類與期限，再決定怎麼回應。</p>
+          <a class="go" href="https://line.me/ti/p/~qxy0127" target="_blank" rel="noopener">把文書內容告訴我 →</a>
+        </div>
+        <div class="situation">
+          <h3>我想離婚，或對方要跟我離婚</h3>
+          <p>談得成就協議，談不成才走訴訟。但離婚很少是單一議題——子女親權、扶養費、剩餘財產分配通常要一起處理。先想清楚你要的結果，順序才不會走錯。</p>
+          <a class="go" href="https://line.me/ti/p/~qxy0127" target="_blank" rel="noopener">說說你的情況 →</a>
+        </div>
+        <div class="situation">
+          <h3>我要爭取孩子的親權或扶養費</h3>
+          <p>法院判斷的標準是「子女最佳利益」，不是誰的收入高、也不是誰先提告。你平常的照顧事實才是關鍵，而那需要有痕跡可以證明。</p>
+          <a class="go" href="https://line.me/ti/p/~qxy0127" target="_blank" rel="noopener">了解怎麼準備 →</a>
+        </div>
+        <div class="situation">
+          <h3>有人欠我錢，或我受到損害想求償</h3>
+          <p>借貸、車禍、契約糾紛、損害賠償。提告前有兩件事要先確認：請求權時效還在不在，以及對方名下有沒有財產可供執行——贏了判決卻拿不到錢，是最常見的遺憾。</p>
+          <a class="go" href="https://line.me/ti/p/~qxy0127" target="_blank" rel="noopener">先評估可行性 →</a>
         </div>
       </div>
     </div>
@@ -520,10 +709,116 @@
     </div>
   </section>
 
-  <section id="book">
+  <section id="knowledge" class="section-plum">
     <div class="wrap">
       <div class="chapter">
         <span class="num">肆</span>
+        <div>
+          <h2>法律知識</h2>
+          <span class="en">Before You Call</span>
+        </div>
+      </div>
+      <p class="track-intro">最花錢的從來不是律師費，是不懂的地方。幾個最常被問到的問題，先寫在這裡——你先看，看完還有疑問再找我。</p>
+      <div class="disclosure kb-list">
+        <details>
+          <summary><span class="kb-tag">家事</span>離婚有兩條路：協議與裁判，差在哪裡？</summary>
+          <div class="answer">
+            <p><strong>協議離婚</strong>要同時滿足三個條件：雙方書面合意、<strong>兩位證人簽名</strong>、到戶政事務所辦理離婚登記。三者缺一不可。實務上常見的狀況是：協議書簽了、證人也簽了，卻沒去戶政登記——法律上婚姻關係依然存在。</p>
+            <p><strong>裁判離婚</strong>是談不攏時向法院請求。須具備民法第 1052 條第 1 項所列事由（例如不堪同居之虐待、惡意遺棄），或同條第 2 項「有前項以外之重大事由，難以維持婚姻」。</p>
+            <div class="takeaway">離婚不是單一議題。子女親權、扶養費、夫妻剩餘財產分配通常要一併處理，先想清楚你要的結果，再決定走協議還是起訴。</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="kb-tag">家事</span>爭取孩子的親權，法院到底看什麼？</summary>
+          <div class="answer">
+            <p>判斷標準是<strong>「子女最佳利益」</strong>（民法第 1055 條之 1），不是收入高低，也不是誰先提告。</p>
+            <p>法院常審酌的因素包括：</p>
+            <ul>
+              <li>子女的年齡、性別與意願（年齡越大，意願越被重視）</li>
+              <li>過去<strong>主要照顧者</strong>是誰</li>
+              <li>父母的照護能力、時間與經濟狀況</li>
+              <li>支持系統，例如祖父母能否協助照顧</li>
+              <li><strong>友善父母原則</strong>——會不會阻撓對方探視</li>
+            </ul>
+            <div class="takeaway">照顧事實要有痕跡。接送紀錄、就醫紀錄、聯絡簿、生活照片，都比口頭主張有說服力。從現在開始留存，不要等到開庭才回頭找。</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="kb-tag">民事</span>收到存證信函，先別急著回覆</summary>
+          <div class="answer">
+            <p>存證信函本身<strong>沒有強制執行力</strong>，它的作用是留下證據：證明某個意思表示在某個時間、以什麼內容送達給你。對方寄出它，通常是在為後續的訴訟鋪路。</p>
+            <p>收到之後，三件事不要做：</p>
+            <ul>
+              <li><strong>不要情緒性回覆</strong>——你寫的每一個字都可能成為對方的證據</li>
+              <li><strong>不要承認不確定的事實</strong>——語氣上的客氣可能被解讀為自認</li>
+              <li><strong>不要完全置之不理</strong>——某些情況下不回應會影響時效或被解讀為默認</li>
+            </ul>
+            <div class="takeaway">先看清楚三件事：對方主張什麼、要求你做什麼、期限到哪一天。確認完再決定要不要回、怎麼回。</div>
+          </div>
+        </details>
+      </div>
+      <p class="track-note">以上為一般法律資訊，用於幫助理解程序與方向，不構成對具體個案之法律意見。個案結果受事實、證據與法院判斷影響，仍應經諮詢後依個案情形判斷。</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="chapter">
+        <span class="num">伍</span>
+        <div>
+          <h2>常見問題</h2>
+          <span class="en">Common Questions</span>
+        </div>
+      </div>
+      <div class="disclosure faq-list">
+        <details>
+          <summary>第一次諮詢要收費嗎？費用怎麼計算？</summary>
+          <div class="answer">
+            <p>依個案收費，<strong>委任後可折抵</strong>。</p>
+            <p>實際金額視案件類型與複雜程度而定，聯繫時會先向你說明，確認後再安排諮詢。</p>
+          </div>
+        </details>
+        <details>
+          <summary>諮詢要準備什麼資料？</summary>
+          <div class="answer">
+            <p>帶齊與案件有關的書面資料，判斷會準確得多：法院或地檢署文書、契約、存證信函、對話紀錄（LINE／簡訊截圖）、匯款或收據憑證。</p>
+            <p>另外請先想一件事：<strong>你希望達成什麼結果</strong>。資料不齊也可以先談，但知道你要什麼，才談得出方向。</p>
+          </div>
+        </details>
+        <details>
+          <summary>我還沒決定要不要提告，可以先諮詢嗎？</summary>
+          <div class="answer">
+            <p>可以，而且建議先談。很多案件最合適的處理方式並不是提告——訴訟要花時間、花費用，結果也不保證。</p>
+            <p>先評估證據強弱、可能的結果、要付出的成本與時間，再決定走不走訴訟，本來就是諮詢的目的之一。</p>
+          </div>
+        </details>
+        <details>
+          <summary>服務哪些地區？外縣市的案件可以嗎？</summary>
+          <div class="answer">
+            <p>全臺受理。主事務所位於桃園市桃園區，外縣市案件可安排電話或視訊諮詢；開庭則依案件管轄法院前往。</p>
+          </div>
+        </details>
+        <details>
+          <summary>我傳訊息之後，多久會收到回覆？</summary>
+          <div class="answer">
+            <p>一般於 <strong>24 小時內</strong>回覆，假日順延。</p>
+            <p>若案件有急迫的回應期限（例如傳票上的日期已近），請在訊息中直接註明，會優先處理。</p>
+          </div>
+        </details>
+        <details>
+          <summary>委任之後，案件是由誰處理？</summary>
+          <div class="answer">
+            <p>由邱馨儀律師本人承辦。從諮詢、擬狀到出庭皆親自處理，不轉交、不假手他人，確保案件策略前後一致。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <div class="chapter">
+        <span class="num">陸</span>
         <div>
           <h2>預約諮詢</h2>
           <span class="en">Book a Consultation</span>
@@ -571,6 +866,42 @@
           </a>
         </div>
       </div>
+
+      <form class="intake" id="intake-form">
+        <h3>先告訴我你的狀況</h3>
+        <p class="intake-lead">填完按下按鈕，內容會自動整理並複製起來，LINE 開啟後直接貼上即可。第一句話就講清楚，省掉來回問答的時間。</p>
+        <div class="field">
+          <label for="f-name">怎麼稱呼你 <span class="hint">（只填姓氏也可以）</span></label>
+          <input type="text" id="f-name" placeholder="例：王小姐">
+        </div>
+        <div class="field">
+          <label for="f-phone">聯絡電話 <span class="hint">（選填，案件緊急時方便回電）</span></label>
+          <input type="tel" id="f-phone" placeholder="09xx-xxx-xxx">
+        </div>
+        <div class="field">
+          <label>案件類型</label>
+          <div class="chips-pick">
+            <label><input type="radio" name="f-type" value="家事（離婚／親權／財產分配／繼承）" checked><span>家事</span></label>
+            <label><input type="radio" name="f-type" value="民事（求償／契約／債務）"><span>民事</span></label>
+            <label><input type="radio" name="f-type" value="刑事（辯護／告訴代理）"><span>刑事</span></label>
+            <label><input type="radio" name="f-type" value="還不確定"><span>還不確定</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-deadline">有沒有期限 <span class="hint">（例：傳票上寫 12/5 開庭）</span></label>
+          <input type="text" id="f-deadline" placeholder="沒有期限就留空">
+        </div>
+        <div class="field">
+          <label for="f-detail">發生了什麼事 <span class="hint">（兩三句話就好）</span></label>
+          <textarea id="f-detail" placeholder="例：配偶不同意離婚，我想爭取孩子的親權，目前還沒提告。"></textarea>
+        </div>
+        <button type="submit" class="btn btn-line intake-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.66 2 10.15c0 3.02 2.02 5.68 5.02 7.15-.22.8-.8 2.9-.92 3.35-.15.55.2.55.42.4.17-.12 2.7-1.83 3.8-2.58.86.12 1.75.19 2.68.19 5.52 0 10-3.66 10-8.51C23 5.66 18.52 2 12 2z" fill="currentColor"/></svg>
+          整理內容並開啟 LINE
+        </button>
+        <pre class="intake-preview" id="intake-preview" hidden></pre>
+        <p class="intake-note">這個表單<strong>不會把資料送到任何伺服器</strong>，內容只會複製到你自己的剪貼簿。貼進 LINE 之前，你隨時可以修改或刪除。</p>
+      </form>
     </div>
   </section>
 </main>
@@ -626,4 +957,48 @@
       }
     });
   });
+
+  /* 諮詢表單：整理成一段文字 → 複製到剪貼簿 → 開啟 LINE。
+     靜態網頁沒有伺服器可以收資料，所以讓訪客自己帶著整理好的內容去 LINE。 */
+  (function(){
+    var form = document.getElementById('intake-form');
+    if(!form) return;
+    var LINE_URL = 'https://line.me/ti/p/~qxy0127';
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      function val(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+      var picked = form.querySelector('input[name="f-type"]:checked');
+      var lines = ['邱律師您好，我想諮詢：'];
+      if(val('f-name'))     lines.push('稱呼：' + val('f-name'));
+      if(val('f-phone'))    lines.push('電話：' + val('f-phone'));
+      if(picked)            lines.push('案件類型：' + picked.value);
+      if(val('f-deadline')) lines.push('期限：' + val('f-deadline'));
+      if(val('f-detail'))   lines.push('狀況：' + val('f-detail'));
+      var text = lines.join('\n');
+
+      var preview = document.getElementById('intake-preview');
+      if(preview){ preview.textContent = text; preview.hidden = false; }
+
+      var toast = document.getElementById('toast');
+      function say(msg){
+        if(!toast) return;
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(function(){ toast.classList.remove('show'); }, 3600);
+      }
+
+      // 複製與開窗都要留在使用者點擊的當下，否則瀏覽器會擋彈出視窗
+      var copying = (navigator.clipboard && navigator.clipboard.writeText)
+        ? navigator.clipboard.writeText(text) : null;
+      window.open(LINE_URL, '_blank', 'noopener');
+
+      if(copying){
+        copying.then(function(){ say('已複製，在 LINE 對話框直接貼上即可'); })
+               .catch(function(){ say('請複製下方整理好的內容，貼到 LINE'); });
+      } else {
+        say('請複製下方整理好的內容，貼到 LINE');
+      }
+    });
+  })();
 </script>
